@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Aula07</title>
+    <style>
+      .container {
+        border: 1px solid lightgray;
+        padding: 10px;
+        margin: 10px;
+      }
+
+      p {
+        background-color: red;
+        color: white;
+      }
+
+    </style>
+  </head>
+
+
+  <body>
+    <h2>Adicionando elementos ao HTML dinamicamente com apend, prepend, after, before</h2>
+    <div class="container">
+      Dentro da DIV
+    </div>
+
+    </script>
+  </body>
+  <script>
+    let div = document.querySelector('.container')
+    //adiciona elemento antes da DIV
+    div.before('Cheguei!!')
+
+    //adiciona elemento dentro da div, mas no início
+    div.prepend('<---')
+
+    //adiciona dentro da div, mas no fim
+    div.append('--->')
+
+    //adicionando elemento após a div
+    div.after('Já estou indo!')
+  </script>
+
+</html>

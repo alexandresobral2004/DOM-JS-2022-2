@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-CLASSNAME E CLASSLIST</title>
+    <style>
+      .parag1 {
+        color: red;
+        font-size: large;
+      }
+
+      .parag2 {
+        color: green;
+        font-size: large;
+      }
+
+      .espaco {
+        padding: 10px;
+      }
+
+    </style>
+  </head>
+
+
+  <body>
+    <h2>DOM-CLASSNAME E CLASSLIST </h2>
+    <h4>Adicionando e Removendo classes dos elementos</h4>
+
+    <p class="p-1 espaco">ESTE É O PARÁGRAFO 1</p>
+    <p>ESTE É O PARÁGRAFO 2</p>
+
+
+
+    <script>
+      //className é uma property que permite alterar a classe do elemento
+      let p = document.querySelectorAll('p')[0]
+      p.className = 'parag1'
+
+      let classes = p.classList
+      console.log(classes)
+
+
+      //ADICIONANDO CLASS AO PARAG2
+      let p2 = document.querySelectorAll('p')[1]
+      // p2.classList.add('parag2')
+      // p2.classList.add('espaco')
+
+      //REMOVENDO CLASS
+      // p2.classList.remove('espaco')
+      //REMOVENDO/ADICIONANDO COM toggle CLASS
+      //SE N EXISTIR CRIA, SE EXISTIR REMOVE
+      p2.classList.toggle('espaco')
+
+
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Clonando e Removendo elementos </title>
+    <style>
+      .container {
+        border: 1px solid lightgray;
+        padding: 10px;
+        margin: 10px;
+      }
+
+      p {
+        background-color: green;
+        color: white;
+      }
+
+    </style>
+  </head>
+
+
+  <body>
+    <div id="container" class="container">
+      <p>Clonando Elementos</p>
+      <ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+      </ul>
+
+    </div>
+
+  </body>
+  <script>
+    //CLONANDO ELEMENTOS
+    // let div = document.querySelector('#container').cloneNode(true)
+    // document.querySelector('#container').after(div)
+
+    //REMOVER O container completo
+    // document.querySelector('#container').remove()
+    
+    //REMOVER o parágrafo dentro da div
+    // document.querySelector('#container > p').remove()
+    
+    //REMOVER o item 1 da lista
+    // document.querySelector(' #container > ul > li').remove()
+
+    //REMOVENDO O PRIMEIRO FILHO
+    // document.querySelector(' #container > ul > li:first-child').remove()
+
+    //REMOVENDO O ÚLTIMO FILHO
+    // document.querySelector(' #container > ul > li:last-child').remove()
+
+
+    //REMOVER o item 2 da lista
+    // document.querySelectorAll(' #container > ul > li')[2].remove()
+
+
+
+
+
+  </script>
+
+</html>

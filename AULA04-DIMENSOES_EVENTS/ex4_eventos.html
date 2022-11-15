@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTOS - 1</title>
+  </head>
+
+  <style>
+    h1 {
+      margin: 50px auto;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .parag {
+      width: 40px;
+      background-color: gray;
+      color: black;
+      font-size: 20px;
+    }
+
+  </style>
+
+  <body>
+    <h1>Trabalhando com eventos - Criando e apagando parágrafos</h1>
+
+
+    <p id="p1">P1</p>
+
+    <button onclick="add()">Adicionar</button>
+    <button onclick="del()">Remover</button>
+
+  </body>
+
+  <script>
+
+
+    numero = 1;
+    function add() {
+
+      numero = numero + 1;
+      let parag = document.createElement('p')
+      parag.className = 'parag'
+      parag.innerText = numero
+      let p1 = document.querySelector('#p1')
+      p1.after(parag)
+
+    }
+
+
+    function del() {
+      let parag = document.getElementsByClassName('parag')
+      console.log(parag)
+      parag[0].remove()
+
+    }
+
+
+
+
+
+
+
+
+  </script>
+
+</html>

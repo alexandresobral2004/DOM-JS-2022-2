@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Aula05 - get e setAtributes</title>
+  </head>
+  <style>
+    #muda_cor {
+      color: blue;
+    }
+    .muda_cor {
+      color: green;
+    }
+  </style>
+  <body>
+    <h3 id="titulo">Título em HTML</h3>
+    <p id="texto_1">Parágrafo em HTML</p>
+    <p id="texto_2">Parágrafo em HTML2</p>
+    <script>
+      /*
+       Obtendo e Definindo atributos
+      */
+      //OBTENDO O ATRIBUTO DE UM ELEMENTO
+
+      let valor = document.getElementsByTagName('p')[0].getAttribute('id')
+      console.log(valor)
+
+      //MUDANDO O ATRIBUTO DE UM ELEMENTO
+      valor2 = document.getElementsByTagName('p')[0]
+      valor2.setAttribute("id", "muda_cor")
+
+      //MUDANDO O ATRIBUTO DE UM ELEMENTO
+      valor3 = document.getElementsByTagName('p')[1]
+      valor3.setAttribute("class", "muda_cor")
+    </script>
+
+
+    <!-- <label class="cor_verde">OLÁ MUNDO</label> -->
+
+    <!-- <div>
+      Este texto está dentro de uma div
+    </div>
+
+    <form action="" method="post">
+      <input type="text" name="text_usuario">
+    </form> -->
+
+
+  </body>
+
+</html>

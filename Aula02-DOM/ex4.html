@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Aula04</title>
+  </head>
+
+
+  <body>
+    <!-- <label for="">
+
+      getElementById
+      getElementsByName
+      getElementsByTagName
+      getElementsByClassName
+
+    </label> -->
+
+
+    <style>
+      .cor_verde {
+        color: green;
+      }
+
+      .cor_laranja {
+        color: orange;
+      }
+
+    </style>
+    <H2>ESTUDANDO</H2>
+    <h3 id="titulo">Título em HTML</h3>
+    <p id="texto_1">Parágrafo em HTML</p>
+    <p id="texto_2">Parágrafo em HTML2</p>
+
+    <label class="cor_verde">OLÁ MUNDO</label>
+    <div>
+      Este texto está dentro de uma div
+    </div>
+    <form action="" method="post">
+      <input type="text" name="text_usuario">
+      <input type="text" name="text_usuario">
+    </form>
+    <script>
+      document.getElementById('titulo').innerText = 'Novo Título'
+      
+      console.log(document.getElementsByName('text_usuario'))
+      
+      document.getElementsByName('text_usuario')[0].value = "Alexandre"
+      
+      document.getElementsByName('text_usuario')[1].value = "Rocha"
+      
+      document.getElementsByTagName('p')[0].innerText = 'Este é o segundo parágrafo'
+      
+      document.getElementsByClassName('cor_verde')[0].className = 'cor_laranja'
+    </script>
+  </body>
+
+</html>

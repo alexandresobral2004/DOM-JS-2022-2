@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula03 - DOM</title>
+  </head>
+
+  <body>
+    <h1>Estudando DOM</h1>
+    <p>O DOM (Document Object Model) é a representação de dados dos objetos que compõem a estrutura e o conteúdo de um
+      documento na Web. Neste guia, apresentaremos brevemente o DOM. Veremos como o DOM representa um documento HTML ou
+      XML na memória e como você usa APIs para criar aplicativos e conteúdo da Web.</p>
+
+
+    <script>
+      console.log(document.body.childNodes)
+      document.body.childNodes[1].innerText = "Novo Texto do Parágrafo 1"
+      document.body.childNodes[1].textContent = "Novo Texto do Parágrafo 2"
+      console.log(document.documentElement.lang)
+
+    </script>
+  </body>
+
+</html>

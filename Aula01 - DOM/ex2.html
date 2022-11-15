@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <body>
+
+    <h2>JavaScript HTML DOM</h2>
+
+    <p>Finding HTML Elements by Tag Name.</p>
+    <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+    <p id="demo">OIII</p>
+
+    <script>
+      /*Lista dos parágrafos */
+      const element = document.getElementsByTagName("p");
+      console.log(element)
+
+      /*Lista dos parágrafos */
+      document.getElementById("demo").innerHTML = 'The text in first paragraph (index 0) is: ' + element[0].innerHTML;
+
+    </script>
+
+  </body>
+
+</html>

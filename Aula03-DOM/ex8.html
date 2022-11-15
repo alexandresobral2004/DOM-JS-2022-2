@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando elementos e adicionando a arvore com DOM</title>
+    <style>
+      .container {
+        border: 1px solid lightgray;
+        padding: 10px;
+        margin: 10px;
+      }
+
+      p {
+        background-color: red;
+        color: white;
+      }
+
+    </style>
+  </head>
+
+
+  <body>
+    <h2>Criando elementos e adicionando a arvore com DOM</h2>
+    <div class="container">
+      Dentro da DIV
+    </div>
+
+    </script>
+  </body>
+  <script>
+    let p1 = document.createElement('p')
+    let p2 = document.createElement('p')
+    let p3 = document.createElement('p')
+    let p4 = document.createElement('p')
+    p1.innerText = 'Parágrafo 1'
+    p2.innerText = 'Parágrafo 2'
+    p3.innerText = 'Parágrafo 3'
+    p4.innerText = 'Parágrafo 4'
+
+    //colocar o parágrafo antes da DIV
+    let div = document.querySelector('.container')
+    div.before(p1)
+    div.prepend(p2)
+    div.append(p3)
+    div.after(p4)
+
+
+  </script>
+
+</html>

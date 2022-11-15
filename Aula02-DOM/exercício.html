@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Aula04</title>
+  </head>
+  <style>
+  </style>
+
+  <body>
+
+    <p id="texto_1">Parágrafo 1 em HTML</p>
+    <p id="texto_2">Parágrafo 2 em HTML2</p>
+
+    <form action="" method="post">
+      <input type="text" name="text_usuario">
+      <input type="text" name="text_usuario">
+    </form>
+
+    <!--
+     - Mudar a cor do texto do parágrafo1
+     - Mudar o tamanho da letra do parágrafo 2
+     - Pegar o text_usuario e adicionar dentro um nome qualquer 
+   -->
+    <script>
+      document.getElementById('texto_1').style.color = 'blue'
+      document.getElementById('texto_2').style.fontSize = '30px'
+      document.getElementsByName('text_usuario')[0].value = 'OLÁ MUNDO'
+      document.getElementsByName('text_usuario')[1].value = 'ESTOU AQUI!!'
+    </script>
+  </body>
+
+</html>

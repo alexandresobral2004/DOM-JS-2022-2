@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTOS - 1</title>
+  </head>
+
+  <style>
+    h1 {
+      margin: 50px auto;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+  </style>
+
+  <body>
+    <h1>Trabalhando com eventos - 2 addEventListener</h1>
+
+    <h2 id="titulo1">Título 1</h2>
+    <h2 id="titulo2">Título 2</h2>
+    <h2 id="titulo3">Título 3</h2>
+
+    <button id="adicionar">Add Evento</button>
+    <button id="botao">Executar Evento</button>
+    <button id="remover">Remover Evento</button>
+  </body>
+
+  <script>
+
+
+
+    document.querySelector('#adicionar').addEventListener('click', adicionar_eventos)
+
+    document.querySelector('#remover').addEventListener('click', remover_eventos)
+
+    // document.querySelector('#remover').addEventListener('click', delClick)
+
+
+    function adicionar_eventos() {
+      let e = document.querySelector('#botao')
+      e.addEventListener('click', executar_1)
+      e.addEventListener('click', executar_2)
+      e.addEventListener('click', executar_3)
+
+    }
+
+    function executar_1() {
+      let agora = new Date()
+      console.log(agora.getSeconds())
+      document.querySelector('#titulo1').textContent = agora.getSeconds();
+    }
+
+    function executar_2() {
+      let agora2 = new Date()
+      document.querySelector('#titulo2').textContent = agora2.getSeconds();
+    }
+
+    function executar_3() {
+      let agora3 = new Date()
+      document.querySelector('#titulo3').textContent = agora3.getSeconds();
+    }
+
+
+    function remover_eventos() {
+      document.querySelector('#botao').removeEventListener('click', executar_1)
+      document.querySelector('#botao').removeEventListener('click', executar_2)
+      document.querySelector('#botao').removeEventListener('click', executar_3)
+    }
+
+
+
+
+  </script>
+
+</html>

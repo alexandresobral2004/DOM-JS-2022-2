@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Aula06</title>
+    <style>
+      #parag1 {
+        color: red;
+        font-size: large;
+      }
+
+      #parag2 {
+        color: green;
+        font-size: large;
+      }
+
+      .teste {
+        color: green;
+        font-size: large;
+        border: 1px solid black;
+      }
+
+      ul>li:last-child {
+        color: orange;
+        font-size: 30px;
+
+      }
+
+    </style>
+  </head>
+
+
+  <body>
+    <h2>QuerySelector e QuerySelectorAll</h2>
+
+    <p id="parag1">Paragrafo 1</p>
+
+    <p id="parag2">Paragrafo 2</p>
+
+    <div>texto da div 1</div>
+
+    <div>texto da div 2</div>
+
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ul>
+    <script>
+      /*
+        QuerySelector e QuerySelectorAll
+      */
+
+      //busca por seletores e tags htmls
+      let e = document.querySelector('p')
+      console.log(e)//imprime o parag 1
+
+      //imprime os paragráfos 1\
+      let f = document.querySelectorAll('p')
+      console.log(f)
+
+      //imprime a primeira div
+      let g = document.querySelector('div')
+      g.textContent = 'Estou aqui na DIV 0'
+      console.log(g)//imprime a div 1\
+
+      //imprime a segunda div e mudo o texto dela
+      let h = document.querySelectorAll('div')[1]
+      h.textContent = 'Estou aqui na DIV 1'
+      h.className = 'teste'
+
+      console.log(h)
+
+      //Busco o último ítem da lista e mudo seu texto
+      let i = document.querySelector('ul > li:last-child')
+      i.textContent = 'Item Mudado'
+      console.log(i)
+
+
+    </script>
+  </body>
+
+</html>

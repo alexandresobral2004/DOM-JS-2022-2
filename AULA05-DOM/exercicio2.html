@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function calcularQuadrado() {
+                var numeros = document.getElementById("txtNumeros").value;
+                for (i = 0; i < numeros.length; i++) {
+                    //multiplica 
+                    quadrado = parseInt(numeros[i]) * parseInt(numeros[i]);
+                    //exibe o resultado
+                    //document.write("O quadrado de " + numeros[i] + " é " + quadrado + "<br>");
+                    let result = document.querySelector('#result')
+                    result.innerHTML = "O quadrado de " + numeros[i] + " é " + quadrado + "<br>"
+
+                }
+
+            }
+        </script>
+
+        <style>
+            #result {
+                background-color: goldenrod;
+                font-size: 20px;
+                margin-top: 10px;
+                width: 250px;
+
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h2>Calculando o Quadrado de um número</h2>
+        Números<input type="text" id="txtNumeros">
+        <input type="button" value="Calcular Quadrado" onclick="calcularQuadrado()">
+        <div id="result"></div>
+
+    </body>
+
+</html>
