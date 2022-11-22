@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>formulário</title>
+
+
+    </head>
+
+    <style type="text/css">
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .container {
+            margin: 10px;
+            width: 340px;
+            background-color: lightblue;
+            padding: 10px;
+            width: 400px;
+            height: auto;
+        }
+
+        .grid-template-columns-1 {
+            grid-template-columns: 1fr 7fr;
+        }
+
+        .grid-template-columns-2 {
+            grid-template-columns: 1fr;
+        }
+
+        .field {
+            display: grid;
+            margin-top: 10px;
+        }
+
+        .field>#sobrenome {
+            width: 150px;
+        }
+
+        .field>button {
+            width: 70px;
+            margin: 30px 40px 0px auto;
+        }
+
+        .msg {
+            width: auto;
+            background-color: white;
+            color: lawngreen;
+            font-size: 10px;
+        }
+
+    </style>
+
+    <body>
+
+        <div class="container">
+            <h2>Cadastro de Usuário</h2>
+            <form id="form">
+                <div class="field grid-template-columns-1">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" class="campo">
+                    <span></span>
+                    <label class="msg"></label>
+                </div>
+
+                <div class="field grid-template-columns-1">
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" name="sobrenome" class="campo">
+                    <span></span>
+                    <label class="msg"></label>
+                </div>
+
+                <div class="field grid-template-columns-1">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" name="cpf" class="campo">
+                    <span></span>
+                    <label class="msg"></label>
+                </div>
+
+                <div class="field grid-template-columns-1">
+                    <button id="btnSend" type="submit">Enviar</button>
+                    <button onclick="resetForm()" type="submit">Limpar</button>
+                </div>
+
+                <script src="script.js"></script>
+    </body>
+
+</html>
