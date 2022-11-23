@@ -19,15 +19,20 @@ h2{
 .grid-template-columns-1 {
 	grid-template-columns: 1fr 7fr;
 }
-.grid-template-columns-2 {
-	grid-template-columns: 1fr;
-}
+
 .field{
   display: grid;
   margin-top:10px;
 }
 
 .field > #fone{
+  width: 150px;
+}
+
+.field > #cep{
+  width: 150px;
+}
+.field > #cpf{
   width: 150px;
 }
 

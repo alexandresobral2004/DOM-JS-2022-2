@@ -3,7 +3,8 @@
 var fields = document.getElementsByClassName('campo')
 var labels = document.getElementsByClassName('msg')
 var btnSend = document.getElementById('btnSend')
-
+// console.log(fields)
+// console.log(labels)
 
 btnSend.addEventListener('click', (e) => {
 
@@ -12,9 +13,11 @@ btnSend.addEventListener('click', (e) => {
 
 btnSend.addEventListener('click', (e) => {
   e.preventDefault()
-  validaNome()
-  validaEmail()
-  validaFone()
+  validaNome();
+  validaEmail();
+  validaFone();
+  validaCep();
+  validaCPF();
 })
 
 
@@ -39,11 +42,17 @@ function validaNome() {
     labels[0].textContent = 'O Nome deve ter mais de 10 letras';
     return false;
   }
+  else {
+    console.log(fields[0].value)
+  }
 
 }
 
 function validaEmail() {
   let mail = fields[1].value
+  const regex = /com/g;
+
+
   if (fields[1].value.length < 5) {
     labels[1].textContent = 'O E-mail deve ser preenchido!';
     return false;
@@ -53,17 +62,84 @@ function validaEmail() {
     labels[1].textContent = 'O E-mail deve ter @!';
     return false;
   }
+  if (!mail.match(regex)) {
+    labels[1].textContent = 'O E-mail deve ter .com';
+    return false;
+  }
+  else {
+    console.log(mail)
+  }
 
 }
 
 function validaFone() {
+
+  const fone = fields[2].value;
+
   if (fields[2].value.length < 5) {
     labels[2].textContent = 'O fone deve ser preenchido!';
-
-  }
-  else {
     return false;
   }
+
+  else {
+    console.log(fields[2].value)
+  }
+
+}
+
+function validaCep() {
+
+  const cep = fields[3].value;
+  if (fields[3].value.length < 8) {
+    labels[3].textContent = 'O CEP deve ser preenchido!';
+    return false;
+  }
+  else {
+    return true;
+  }
+
+}
+
+function validaCPF() {
+
+  const cep = fields[4].value;
+  if (fields[4].value.length < 11) {
+    labels[4].textContent = 'O CPF deve ser preenchido!';
+    return false;
+  }
+  else {
+    return true;
+  }
+
+}
+
+
+
+
+function aplicaMascara() {
+  maskFone();
+  maskCEP();
+  maskCPF();
+}
+
+function maskFone() {
+  var fone_id = document.getElementById('fone');
+
+  const maskOptions = { mask: '(00)0000-0000' }
+  const mask = IMask(fone_id, maskOptions);
+}
+function maskCEP() {
+  var cep_id = document.getElementById('cep');
+
+  const maskOptions = { mask: '00000-000' }
+  const mask = IMask(cep_id, maskOptions);
+}
+
+function maskCPF() {
+  var cpf_id = document.getElementById('cpf');
+
+  const maskOptions = { mask: '000.000.000-00' }
+  const mask = IMask(cpf_id, maskOptions);
 }
 
 
