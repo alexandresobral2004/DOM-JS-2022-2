@@ -4,6 +4,39 @@ var fields = document.getElementsByClassName('campo')
 var labels = document.getElementsByClassName('msg')
 var btnSend = document.getElementById('btnSend')
 
+//Exbir valores
+
+var exibeNome = () => {
+  var mostraNome = document.getElementById('mostraNome')
+
+  mostraNome.innerHTML = `Nome: ` + fields[0].value
+}
+
+var exibeEmail = () => {
+  var mostraNome = document.getElementById('mostraEmail')
+
+  mostraNome.innerHTML = `E-mail: ` + fields[1].value
+}
+
+var exibeFone = () => {
+  var mostraNome = document.getElementById('mostraFone')
+
+  mostraNome.innerHTML = `Fone: ` + fields[2].value
+}
+
+var exibeCep = () => {
+  var mostraNome = document.getElementById('mostraCep')
+
+  mostraNome.innerHTML = `Cep: ` + fields[3].value
+}
+
+var exibeCpf = () => {
+  var mostraNome = document.getElementById('mostraCpf')
+  mostraNome.innerHTML = `CPF: ` + fields[4].value
+}
+
+
+
 
 
 btnSend.addEventListener('click', (e) => {
