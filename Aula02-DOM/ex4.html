@@ -30,7 +30,7 @@
       }
 
     </style>
-    <H2>ESTUDANDO</H2>
+    <H2>ESTUDANDO os Métodos de busca do DOM</H2>
     <h3 id="titulo">Título em HTML</h3>
     <p id="texto_1">Parágrafo em HTML</p>
     <p id="texto_2">Parágrafo em HTML2</p>
@@ -45,17 +45,62 @@
     </form>
     <script>
       document.getElementById('titulo').innerText = 'Novo Título'
-      
-      console.log(document.getElementsByName('text_usuario'))
-      
+
+      // console.log(document.getElementsByName('text_usuario'))
+
       document.getElementsByName('text_usuario')[0].value = "Alexandre"
-      
+
       document.getElementsByName('text_usuario')[1].value = "Rocha"
-      
+
       document.getElementsByTagName('p')[0].innerText = 'Este é o segundo parágrafo'
-      
+
       document.getElementsByClassName('cor_verde')[0].className = 'cor_laranja'
     </script>
+
+
+
+    <br>
+    <br>
+
+    <h1>Estudando Eventos</h1>
+
+    <form action="">
+      <input type="text" class="inputs" onchange="exibeTexto()" name="nome"><br>
+      <input type="text" class="inputs" name="sobrenome"><br>
+
+      <label id="exibe">Label de Exibição</label><br>
+
+      <input type="button" onclick="mudaLetra()" value="Mudar Letra">
+    </form>
+
+    <script>
+
+      function mudaLetra() {
+        const inputs = document.getElementsByClassName('inputs')
+        for (i = 0; i < inputs.length; i++) {
+          inputs[i].value = inputs[i].value.toUpperCase()
+        }
+      }
+
+
+      function exibeTexto() {
+        const lbl = document.getElementById('exibe')
+        const show = document.getElementsByClassName('inputs')[0]
+        console.log(show.value)
+        lbl.innerHTML = show.value
+
+      }
+
+
+
+
+
+    </script>
+
+
+
+
+
   </body>
 
 </html>
