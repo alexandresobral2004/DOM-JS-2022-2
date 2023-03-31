@@ -15,6 +15,7 @@
     <p>Finding HTML Elements by Tag Name.</p>
     <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
     <p id="demo">OIII</p>
+    <p>Boa tarde</p>
 
     <script>
       /*Lista dos parágrafos */
@@ -23,6 +24,10 @@
 
       /*Lista dos parágrafos */
       document.getElementById("demo").innerHTML = 'The text in first paragraph (index 0) is: ' + element[0].innerHTML;
+
+      //Mudando de boa tarde para Boa noite!
+      element[3].innerHTML = "Boa Noite"
+
 
     </script>
 

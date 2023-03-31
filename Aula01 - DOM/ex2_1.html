@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <body>
+
+    <h2>JavaScript HTML DOM</h2>
+
+    <p class="parag">Parágrafo 1.</p>
+    <p class="parag">Parágrafo 2.</p>
+    <p class="parag">Parágrafo 3.</p>
+    <p class="parag">Parágrafo 4.</p>
+    <p class="parag">Parágrafo 5.</p>
+    <br>
+    <input type="text" name="texto" id="texto" oninput="imprimeTexto()">
+    <br>
+    <p id="saida"></p>
+
+    <script>
+      //Pegando o texto e exibindo
+      function imprimeTexto() {
+        let texto = document.getElementById("texto").value
+        document.getElementById("saida").style.textAlign = "center"
+        document.getElementById("saida").innerHTML = texto
+
+      }
+         // const element2 = document.getElementsByClassName("parag")
+      // element2[0].innerHTML = "Estou aqui!"
+      // element2[0].style.backgroundColor = "yellow"
+      // console.log(element2)
+    </script>
+
+  </body>
+
+</html>
